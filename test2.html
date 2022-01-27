@@ -7924,9 +7924,13 @@
     </script>
 
     <script>
-    $(function(){
-        $(".merchandise>li>a").each().attr("href",("https://www.modetour.com"+$(".merchandise>li>a").each().attr("href")));
-    });
+        $(function () {
+
+            $('.merchandise>li>a').each(function (index, item) {
+                var attrValue = "https://www.modetour.com" + $(item).attr("href");
+                $(item).attr("href", attrValue);
+            })
+        });
 
     </script>
     <!-- AceCounter(E-Biz) Version 5.2 START (ModeTour Only) -->
