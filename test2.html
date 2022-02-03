@@ -7924,6 +7924,7 @@
     </script>
 
     <script>
+<<<<<<< HEAD
             $(function () {
 
                 $('.merchandise>li>a').each(function (index, item) {
@@ -7933,7 +7934,17 @@
             });
 
     </script>
+=======
+        $(function () {
+>>>>>>> bed8c3b02ddcd245700fdfb38c4736e6ff8c6ba9
 
+            $('.merchandise>li>a').each(function (index, item) {
+                var attrValue = "https://www.modetour.com" + $(item).attr("href");
+                $(item).attr("href", attrValue);
+            })
+        });
+
+    </script>
     <!-- AceCounter(E-Biz) Version 5.2 START (ModeTour Only) -->
 
     <!-- AceCounter(E-Biz) Version 5.2 END -->

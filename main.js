@@ -30,7 +30,7 @@ getHtml()
     };
     return data;
   })
-   .then((res) => log(res));
+   .then((res) => log(res)); 
   //.then((res) => document.getElementById('copyHere').innerHTML=res);
 
 
