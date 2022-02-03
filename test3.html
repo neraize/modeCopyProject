@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="https://js.modetour.com/jquery/ver/1.11.3.min.js"></script>
-    <!-- <script src="main.js"></script> -->
+    <script src="main.js"></script>
     <title>Document</title>
 
 </head>
@@ -61,14 +61,16 @@
             $(item).attr("href", attrValue);
         })
 
-        $.ajax({
-            url: "https://cors-anywhere.herokuapp.com/https://www.modetour.com/pkg/?MLoc=01&Theme=THE88&id=LOC985&domestic=Y",
-            dataType: 'jsonp',
-            jsonpCallback: "myCallback",
-            success: function (data) {
-                     console.log('ajax', data);
-            }
-        });
+        // $.ajax({
+        //     url: "https://cors-anywhere.herokuapp.com/https://www.modetour.com/pkg/?MLoc=01&Theme=THE88&id=LOC985&domestic=Y",
+        //     dataType: 'jsonp',
+        //     jsonpCallback: "myCallback",
+        //     success: function (data) {
+        //              console.log('ajax', data);
+        //     }
+        // });
+
+        console.log(data);
 
     });
 
