@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://js.modetour.com/jquery/ver/1.11.3.min.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <title>Document</title>
+
+</head>
+<body>
+    <container style="display: none;">
+        <ul class="merchandise" id="2022-01-28">
+            <li>
+                <a href="/Package/Itinerary.aspx?Pnum=64308308" data-log="S_PKG_THE88_ARE985_dom_64308308">
+                    <span class="img"><img src="//img.modetour.com//eagle/photoimg/55989/Bfile/636372820857407258.png"
+                            alt=""></span>
+                    <div class="info">
+                        <span class="text">[BEST 추천] 제주특가투어 관광호텔 3일<새별오름+족욕체험></span>
+                        <span class="price"><strong>470,000</strong>원</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="merchandise" id="2022-01-29">
+            <li>
+                <a href="/Package/Itinerary.aspx?Pnum=64308309" data-log="S_PKG_THE88_ARE985_dom_64308308">
+                    <span class="img"><img src="//img.modetour.com//eagle/photoimg/55989/Bfile/636372820857407258.png"
+                            alt=""></span>
+                    <div class="info">
+                        <span class="text">[BEST 추천] 제주특가투어 관광호텔 3일<새별오름+족욕체험></span>
+                        <span class="price"><strong>470,000</strong>원</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="merchandise" id="2022-01-30">
+            <li>
+                <a href="/Package/Itinerary.aspx?Pnum=64308310" data-log="S_PKG_THE88_ARE985_dom_64308308">
+                    <span class="img"><img src="//img.modetour.com//eagle/photoimg/55989/Bfile/636372820857407258.png"
+                            alt=""></span>
+                    <div class="info">
+                        <span class="text">[BEST 추천] 제주특가투어 관광호텔 3일<새별오름+족욕체험></span>
+                        <span class="price"><strong>470,000</strong>원</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </container>
+    <div id="copyHere">
+
+    </div>
+<script>
+
+
+    $(function () {
+
+        $('.merchandise>li>a').each(function (index, item) {
+            var attrValue = "https://www.modetour.com" + $(item).attr("href");
+            $(item).attr("href", attrValue);
+        })
+
+        $.ajax({
+            url: "https://cors-anywhere.herokuapp.com/https://www.modetour.com/pkg/?MLoc=01&Theme=THE88&id=LOC985&domestic=Y",
+            dataType: 'jsonp',
+            jsonpCallback: "myCallback",
+            success: function (data) {
+                     console.log('ajax', data);
+            }
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
